@@ -15,39 +15,40 @@ export const Banner = () => {
   const toRotate = [ "Software Developer","Web Developer", "UI/UX Designer","Tech Enthusiast" ];
   const period = 2000;
 
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setDelta(prevDelta => prevDelta / 2);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setIndex(prevIndex => prevIndex - 1);
-      setDelta(period);
-    } else if (isDeleting && updatedText === '') {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setIndex(1);
-      setDelta(500);
-    } else {
-      setIndex(prevIndex => prevIndex + 1);
-    }
-    console.log("Updated index:", index);
-  }
-
   useEffect(() => {
+
+    const tick = () => {
+      let i = loopNum % toRotate.length;
+      let fullText = toRotate[i];
+      let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+  
+      setText(updatedText);
+  
+      if (isDeleting) {
+        setDelta(prevDelta => prevDelta / 2);
+      }
+  
+      if (!isDeleting && updatedText === fullText) {
+        setIsDeleting(true);
+        setIndex(prevIndex => prevIndex - 1);
+        setDelta(period);
+      } else if (isDeleting && updatedText === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+        setIndex(1);
+        setDelta(500);
+      } else {
+        setIndex(prevIndex => prevIndex + 1);
+      }
+      console.log("Updated index:", index);
+    }
+
     let ticker = setInterval(() => {
       tick();
     }, delta);
 
     return () => { clearInterval(ticker) };
-  }, [delta,tick])
+  }, [delta, isDeleting, loopNum, text, toRotate, period])
 
   /*const handleConnectClick = () => {
     window.open('https://www.linkedin.com/in/alla-nikhil-96214217b/', '_blank');
