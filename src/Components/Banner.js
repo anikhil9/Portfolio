@@ -15,14 +15,6 @@ export const Banner = () => {
   const toRotate = [ "Software Developer","Web Developer", "UI/UX Designer","Tech Enthusiast" ];
   const period = 2000;
 
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => { clearInterval(ticker) };
-  }, [text])
-
   const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
@@ -48,6 +40,14 @@ export const Banner = () => {
     }
     console.log("Updated index:", index);
   }
+
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, delta);
+
+    return () => { clearInterval(ticker) };
+  }, [delta,tick])
 
   /*const handleConnectClick = () => {
     window.open('https://www.linkedin.com/in/alla-nikhil-96214217b/', '_blank');
