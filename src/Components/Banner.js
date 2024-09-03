@@ -11,7 +11,7 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  //const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(1);
   const toRotate = [ "Software Developer","Web Developer", "UI/UX Designer","Tech Enthusiast" ];
   const period = 2000;
 
@@ -21,7 +21,7 @@ export const Banner = () => {
     }, delta);
 
     return () => { clearInterval(ticker) };
-  }, [delta,tick])
+  }, [text])
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -46,6 +46,7 @@ export const Banner = () => {
     } else {
       setIndex(prevIndex => prevIndex + 1);
     }
+    console.log("Updated index:", index);
   }
 
   /*const handleConnectClick = () => {
