@@ -48,7 +48,7 @@ export const Banner = () => {
     }, delta);
 
     return () => { clearInterval(ticker) };
-  }, [delta, isDeleting, loopNum, text, toRotate, period])
+  }, [delta, isDeleting, loopNum, text, toRotate, period, index])
 
   /*const handleConnectClick = () => {
     window.open('https://www.linkedin.com/in/alla-nikhil-96214217b/', '_blank');
