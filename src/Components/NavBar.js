@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../assets/img/logo.svg';
+/*import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+import navIcon3 from '../assets/img/nav-icon3.svg';*/
 import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
-import Nikhil from '../assets/img/Alla_Nikhil_PP_White_BG.jpg';
+//import Nikhil from '../assets/img/Alla_Nikhil_PP_White_BG.jpg';
 import '@fontsource/dancing-script';
 import '@fontsource/great-vibes';
 

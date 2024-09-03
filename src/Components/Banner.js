@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
+//import headerImg from "../assets/img/header-img.svg";
+//import { ArrowRightCircle } from 'react-bootstrap-icons';
 //import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import Nikhil from "../assets/img/Alla_Nikhil_PP_White_BG.jpg"
+//import Nikhil from "../assets/img/Alla_Nikhil_PP_White_BG.jpg"
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [index, setIndex] = useState(1);
+  //const [index, setIndex] = useState(1);
   const toRotate = [ "Software Developer","Web Developer", "UI/UX Designer","Tech Enthusiast" ];
   const period = 2000;
 
@@ -21,7 +21,7 @@ export const Banner = () => {
     }, delta);
 
     return () => { clearInterval(ticker) };
-  }, [text])
+  }, [delta,tick])
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -48,9 +48,9 @@ export const Banner = () => {
     }
   }
 
-  const handleConnectClick = () => {
+  /*const handleConnectClick = () => {
     window.open('https://www.linkedin.com/in/alla-nikhil-96214217b/', '_blank');
-  }
+  }*/
 
   return (
     <section className="banner" id="home">

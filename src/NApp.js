@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import { NavBar } from './Components/NavBar';
-import { Component } from 'react';
+//import { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Banner } from "./Components/Banner";
 import  AboutMe  from "./Components/AboutMe";

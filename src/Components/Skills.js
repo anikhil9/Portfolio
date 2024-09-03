@@ -3,8 +3,8 @@ import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
+//import arrow1 from "../assets/img/arrow1.svg";
+//import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
 
 export const Skills = () => {
@@ -38,27 +38,27 @@ export const Skills = () => {
                         <p>I am a dedicated and innovative Software Developer with a strong foundation in backend development, web technologies, and cloud computing. My expertise spans across multiple programming languages including C#, Java, Python, C++, and JavaScript, as well as frameworks like .NET Core, Spring Boot, and ReactJS. I have hands-on experience in implementing scalable and secure solutions, optimizing SQL databases, and automating CI/CD pipelines using tools like Jenkins and Docker. My proficiency extends to cloud services like AWS and Azure, and I am adept at integrating complex microservices with Kafka. I am a quick learner, driven by a passion for continuous improvement and staying up-to-date with the latest development tools and methodologies.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter1} alt="90" />
                                 <h5>Backend Developer</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
+                                <img src={meter3} alt="95" />
                                 <h5>Full Stack Developer</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
+                                <img src={meter2} alt="90" />
                                 <h5>DevOps Engineer</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
+                                <img src={meter3} alt="80" />
                                 <h5>Web Developer</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
+                                <img src={meter2} alt="70" />
                                 <h5>Cloud Engineer</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
+                                <img src={meter2} alt="65" />
                                 <h5>Data Analyst</h5>
                             </div>
                         </Carousel>
@@ -66,7 +66,7 @@ export const Skills = () => {
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+        <img className="background-image-left" src={colorSharp} alt="BG" />
     </section>
   )
 }
