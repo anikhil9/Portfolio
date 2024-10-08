@@ -1,11 +1,11 @@
-#Interactive Web Portfolio with React
+# Interactive Web Portfolio with React
 
-###Description:
+### Description:
 This project is a responsive web portfolio built using React, showcasing various features such as a navigation bar, an introductory banner, sections for skills, projects, experience, contact details, and a footer. The portfolio is styled using custom CSS and Bootstrap to ensure a modern and clean design.
 
 The main functionality of the webpage includes:
 
-###App Structure:
+### App Structure:
 
 The app is composed of reusable components such as NavBar, Banner, AboutMe, Skills, Experience, Projects, Contact, and Footer.
 Each section provides a different feature of the portfolio, offering a comprehensive showcase of personal and professional information.
